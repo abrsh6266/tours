@@ -9,7 +9,10 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
       <div className="tour-info">
         <h5>{name}</h5>
         <p>
-          
+          {readMore ? info : info.substring(0, 100) + "..."}{" "}
+          <button type="button" className="info-btn" onClick={() => {setReadMore(!readMore)}}>
+            {readMore ? "Read Less" : "read More"}
+          </button>
         </p>
         <button
           className="btn btn-block delete-btn"
