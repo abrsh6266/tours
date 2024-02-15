@@ -25,9 +25,13 @@ const App = () => {
   useEffect(() => {
     fetchTours();
   }, []);
-  
-  if(loading){
-    return <Loading />
+
+  if (loading) {
+    return (
+      <main>
+        <Loading />
+      </main>
+    );
   }
 
   return (
