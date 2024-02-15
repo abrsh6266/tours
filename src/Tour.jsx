@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
 
-const Tour = () => {
-  return (
-    <div>Tour</div>
-  )
-}
+const Tour = ({tour}) => {
+    const { id, name, info, image, price } = tour
+  return <div>{name}</div>;
+};
 
-export default Tour
+export default Tour;
